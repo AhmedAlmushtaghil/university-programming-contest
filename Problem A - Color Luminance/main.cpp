@@ -14,7 +14,7 @@ int main()
     cin >> red >> green >> blue;
 
     // Calculate luminance
-    luminance = 0.5 * (max(red, green, blue) + min(red, green, blue));
+    luminance = 0.5 * (max(max(red, green), blue) + min(min(red, green), blue));
 
     // Calculate percentage of luminance 
     luminance = floor((luminance / 255) * 100);
